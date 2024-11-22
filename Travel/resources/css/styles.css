@@ -1,0 +1,154 @@
+/* Style untuk Popup */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* Tombol Login */
+.login-button {
+  display: block;
+  margin: 100px auto;
+  cursor: pointer;
+  width: 150px;
+}
+
+/* Popup Overlay */
+.popup-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+.popup-overlay.active {
+  display: block;
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  z-index: 1000;
+}
+
+.popup.active {
+  display: block;
+}
+
+.popup h2 {
+  margin: 0 0 10px;
+  font-size: 24px;
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #0056b3;
+}
+
+.popup {
+    display: none; /* Popup tidak terlihat secara default */
+    position: fixed; /* Agar popup tetap di atas dan tetap terlihat ketika scroll */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Latar belakang transparan */
+    justify-content: center; /* Posisi konten di tengah */
+    align-items: center; /* Vertikal tengah */
+    z-index: 1000; /* Agar popup tetap di atas konten lainnya */
+  }
+  
+  .popup__content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .popup p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .popup__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .popup__close:hover {
+    color: #e74c3c;
+  }
+  
+  .popup input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .popup button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .popup button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsiveness */
+  @media screen and (max-width: 768px) {
+    .popup__content {
+      padding: 20px;
+      max-width: 90%;
+    }
+  
+    .popup input[type="email"] {
+      width: 100%;
+    }
+  
+    .popup button {
+      width: 100%;
+    }
+  }
+  

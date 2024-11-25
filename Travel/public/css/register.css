@@ -1,0 +1,64 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.register-form {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+}
+
+.form-control {
+    margin-bottom: 1rem;
+    border-radius: 5px;
+}
+
+.btn-register {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.btn-register:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+}
+
+.form-label {
+    font-weight: 600;
+    color: #333;
+}
+
+.register-title {
+    color: #333;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: bold;
+}
+
+.back-to-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-home:hover {
+    color: #ff6b6b;
+}

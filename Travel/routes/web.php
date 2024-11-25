@@ -2,6 +2,13 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
+use App\Http\Controllers\UserController;
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+Route::post('/register', [UserController::class, 'register']);
 
 // Halaman login
 Route::get('/login', function () {

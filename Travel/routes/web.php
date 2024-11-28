@@ -3,12 +3,15 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\UserController;
+use Illuminate\Http\Request;
 
 Route::get('/register', function () {
     return view('register');
 });
 
 Route::post('/register', [UserController::class, 'register']);
+
+Route::post('/register-process', [UserController::class, 'register'])->name('register.process');
 
 // Halaman login
 Route::get('/login', function () {

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="searchApp">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,12 +13,21 @@
     />
     <link rel="stylesheet" href="/css/styles.css" />
     <title>Web Design Mastery | SKYWINGS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
   </head>
   <body>
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
           <a href="#" class="logo">Skywings</a>
+        </div>
+        <div class="nav__search" ng-controller="SearchController">
+          <div class="search-box">
+            <input type="text" ng-model="searchQuery" placeholder="Search destinations...">
+            <button class="search-btn" ng-click="search()">
+              <i class="ri-search-line"></i>
+            </button>
+          </div>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
@@ -37,7 +46,7 @@
   <button class="btn">BOOK TRIP</button>
 </div>
 <div class="nav__btns">
-  <button class="btn">LOGIN</button>
+  <button class="btn" onclick="window.location.href='/login'">LOGIN</button>
 </div>
     </nav>
 
@@ -432,6 +441,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="main.js"></script>
+    <script src="js/search-app.js"></script>
 <!-- Trigger button to open the popup -->
 <button class="btn" id="openSubscribePopup">Subscribe</button>
   </body>

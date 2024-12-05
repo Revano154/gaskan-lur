@@ -1,6 +1,7 @@
 <?php
 namespace App\Http\Controllers;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use MongoDB\Client;
 use App\Models\User;  // Pastikan menggunakan model yang tepat jika ada

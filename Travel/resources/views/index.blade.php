@@ -43,7 +43,7 @@
         <li><a href="#">LOGIN NOW!</a></li>
       </ul>
       <div class="nav__btns">
-  <button class="btn">BOOK TRIP</button>
+  <button class="btn" onclick="window.location.href='/trips'">BOOK TRIP</button>
 </div>
 <div class="nav__btns">
   <button class="btn" onclick="window.location.href='/login'">LOGIN</button>

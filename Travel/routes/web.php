@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SubscriptionController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
+use App\Http\Controllers\TripController;
 
 Route::get('/register', function () {
     return view('register');
@@ -43,3 +44,5 @@ Route::get('/subscribe', function () {
 
 // Proses subscribe menggunakan SubscriptionController
 Route::post('/subscribe', [SubscriptionController::class, 'store'])->name('subscribe.process');
+
+Route::resource('trips', TripController::class);

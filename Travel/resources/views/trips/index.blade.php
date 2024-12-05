@@ -18,14 +18,14 @@
     <tbody>
         @foreach($trips as $trip)
         <tr>
-            <td>{{ $trip->id }}</td>
-            <td>{{ $trip->destination }}</td>
-            <td>{{ $trip->description }}</td>
-            <td>{{ $trip->price }}</td>
-            <td>{{ $trip->duration }} days</td>
+            <td>{{ (string)$trip['_id'] }}</td>
+            <td>{{ $trip['destination'] }}</td>
+            <td>{{ $trip['description'] }}</td>
+            <td>{{ $trip['price'] }}</td>
+            <td>{{ $trip['duration'] }} days</td>
             <td>
-                <a href="{{ route('trips.edit', $trip->id) }}" class="btn btn-warning">Edit</a>
-                <form action="{{ route('trips.destroy', $trip->id) }}" method="POST" style="display:inline-block;">
+                <a href="{{ route('trips.edit', ['trip' => (string)$trip['_id']]) }}" class="btn btn-warning">Edit</a>
+                <form action="{{ route('trips.destroy', ['trip' => (string)$trip['_id']]) }}" method="POST" style="display:inline-block;">
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Delete</button>

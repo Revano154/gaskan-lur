@@ -9,7 +9,7 @@ class TripController extends Controller
 {
     public function index()
     {
-        $trips = Trip::all();
+        $trips = Trip::getAllTrips();
         return view('trips.index', compact('trips'));
     }
 
@@ -27,13 +27,16 @@ class TripController extends Controller
             'duration'    => 'required|integer',
         ]);
 
-        Trip::create($request->all());
+        Trip::createTrip($request->all());
         return redirect()->route('trips.index');
     }
 
     public function edit($id)
     {
-        $trip = Trip::findOrFail($id);
+        $trip = Trip::findTripById($id);
+        if (!$trip) {
+            abort(404);
+        }
         return view('trips.edit', compact('trip'));
     }
 
@@ -46,15 +49,13 @@ class TripController extends Controller
             'duration'    => 'required|integer',
         ]);
 
-        $trip = Trip::findOrFail($id);
-        $trip->update($request->all());
+        Trip::updateTrip($id, $request->all());
         return redirect()->route('trips.index');
     }
 
     public function destroy($id)
     {
-        $trip = Trip::findOrFail($id);
-        $trip->delete();
+        Trip::deleteTrip($id);
         return redirect()->route('trips.index');
     }
 }

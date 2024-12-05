@@ -6,6 +6,7 @@ use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
 use App\Http\Controllers\TripController;
 
+
 Route::get('/register', function () {
     return view('register');
 });

@@ -39,15 +39,15 @@
         <li><a href="#tour">TOUR</a></li>
         <li><a href="#package">PACKAGE</a></li>
         <li><a href="#contact">CONTACT</a></li>
-        <li><a href="#">BOOK TRIP</a></li>
-        <li><a href="#">LOGIN NOW!</a></li>
+        <li><a href="#trips/index.blade.php">BOOK TRIP</a></li>
+        <li><a href="login.blade.php">LOGIN NOW!</a></li>
       </ul>
       <div class="nav__btns">
-  <button class="btn" onclick="window.location.href='/trips'">BOOK TRIP</button>
-</div>
-<div class="nav__btns">
-  <button class="btn" onclick="window.location.href='/login'">LOGIN</button>
-</div>
+        <button class="btn" onclick="window.location.href='/trips'">BOOK TRIP</button>
+      </div>
+      <div class="nav__btns">
+        <button class="btn" onclick="window.location.href='/login'">LOGIN</button>
+      </div>
     </nav>
 
     <header id="home">
@@ -189,272 +189,59 @@
         <p>
           With Skywings as your ultimate travel companion, exploring the wonders
           of the world has never been easier. Our insider tips and local
-          insights give you the tools to navigate new places with confidence and
-          excitement. From the moment you start planning to the day you return
-          home, we are dedicated to making your travel experience seamless and
-          enriching.
+          insights give you access to destinations beyond the usual tourist
+          spots, allowing you to truly experience the heart and soul of each
+          place. From luxurious getaways to budget-friendly adventures, we offer
+          a wide range of packages to suit all travel styles and budgets.
         </p>
-        <div class="showcase__btn">
-          <button class="btn">
-            Book A Flight Now
-            <span><i class="ri-arrow-right-line"></i></span>
-          </button>
-        </div>
       </div>
     </section>
 
-    <section class="section__container banner__container">
-      <div class="banner__card">
-        <h4>10+</h4>
-        <p>Years Experience</p>
-      </div>
-      <div class="banner__card">
-        <h4>12K</h4>
-        <p>Happy Clients</p>
-      </div>
-      <div class="banner__card">
-        <h4>4.8</h4>
-        <p>Overall Ratings</p>
-      </div>
-    </section>
-
-    <section class="section__container discover__container">
-      <h2 class="section__header">Discover The World From Above</h2>
+    <section class="section__container subscribe__container" id="contact">
+      <h2 class="section__header">Stay In Touch!</h2>
       <p class="section__description">
-        Experience Breathtaking Views and Unique Perspectives
+        Subscribe to our Newsletter for Travel Inspiration and Updates
       </p>
-      <div class="discover__grid">
-        <div class="discover__card">
-          <span><i class="ri-camera-lens-line"></i></span>
-          <h4>Aerial Cityscapes</h4>
-          <p>
-            Witness the architectural marvels and bustling streets from
-            bird's-eye view, offering a unique perspective.
-          </p>
-        </div>
-        <div class="discover__card">
-          <span><i class="ri-ship-line"></i></span>
-          <h4>Coastal Wonders</h4>
-          <p>
-            Fly over pristine coastlines and turquoise waters, revealing hidden
-            coves and vibrant coral reefs.
-          </p>
-        </div>
-        <div class="discover__card">
-          <span><i class="ri-landscape-line"></i></span>
-          <h4>Historic Landmarks</h4>
-          <p>
-            Observe the grandeur of ancient castles and other significant sites
-            in a way that ground tours can't offer.
-          </p>
-        </div>
+      <div class="subscribe__form">
+        <input type="email" placeholder="Enter your email" required />
+        <button class="btn">Subscribe Now</button>
       </div>
     </section>
 
-    <section class="section__container client__container">
-      <h2 class="section__header">Loved By Over Thousand Travelers</h2>
-      <p class="section__description">
-        Discover the stories of wanderlust and cherished memories through the
-        eyes of our valued clients.
-      </p>
-      <!-- Slider main container -->
-      <div class="swiper">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-          <!-- Slides -->
-          <div class="swiper-slide">
-            <div class="client__card">
-              <div class="client__content">
-                <div class="client__rating">
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                </div>
-                <p>
-                  Skywings has completely transformed my travel experience. From
-                  finding hidden gems in bustling cities to discovering serene
-                  retreats off the beaten path, every detail was thoughtfully
-                  arranged. I can't recommend Skywings enough for anyone looking
-                  to elevate their travel experience!
-                </p>
-              </div>
-              <div class="client__details">
-                <img src="assets/client-1.jpg" alt="client" />
-                <div>
-                  <h4>John Adams</h4>
-                  <h5>Travel Blogger</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <div class="client__content">
-                <div class="client__rating">
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                </div>
-                <p>
-                  My recent adventure with Skywings was nothing short of
-                  spectacular. The personalized itineraries and recommendations
-                  they provided led me to extraordinary locations that I would
-                  never have found on my own. I'm already planning my next
-                  adventure with them!
-                </p>
-              </div>
-              <div class="client__details">
-                <img src="assets/client-2.jpg" alt="client" />
-                <div>
-                  <h4>Emily Thompson</h4>
-                  <h5>Adventure Enthusiast</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <div class="client__content">
-                <div class="client__rating">
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                </div>
-                <p>
-                  Skywings offered a transformative experience for my research
-                  into historical landmarks. The unique aerial perspectives and
-                  provided a new level of appreciation and insight into the
-                  sites I studied. I highly recommend their services to fellow
-                  historians and cultural enthusiasts.
-                </p>
-              </div>
-              <div class="client__details">
-                <img src="assets/client-3.jpg" alt="client" />
-                <div>
-                  <h4>Sarah Lee</h4>
-                  <h5>Cultural Historian</h5>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="client__card">
-              <div class="client__content">
-                <div class="client__rating">
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                  <span><i class="ri-star-fill"></i></span>
-                </div>
-                <p>
-                  Finding a balance between work and travel can be challenging,
-                  but Skywings made it effortless. Their efficient planning and
-                  excellent recommendations helped me maximize my downtime and
-                  enjoy every moment of my trip. I look forward to working with
-                  them again on future travels.
-                </p>
-              </div>
-              <div class="client__details">
-                <img src="assets/client-4.jpg" alt="client" />
-                <div>
-                  <h4>David Patel</h4>
-                  <h5>Business Executive</h5>
-                </div>
-              </div>
-            </div>
-          </div>
+    <footer>
+      <div class="footer__container">
+        <div class="footer__logo">
+          <a href="#">Skywings</a>
         </div>
-      </div>
-    </section>
-
-    <footer id="contact">
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <div class="footer__logo">
-            <a href="#" class="logo">Skywings</a>
-          </div>
-          <p>
-            Explore the world with ease and excitement through our comprehensive
-            travel platform. Your journey begins here, where seamless planning
-            meets unforgettable experiences.
-          </p>
-          <ul class="footer__socials">
-            <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
-            </li>
-            <li>
-              <a href="#"><i class="ri-youtube-line"></i></a>
-            </li>
-          </ul>
+        <div class="footer__social">
+          <a href="#"><i class="ri-facebook-fill"></i></a>
+          <a href="#"><i class="ri-twitter-fill"></i></a>
+          <a href="#"><i class="ri-linkedin-fill"></i></a>
         </div>
-        <div class="footer__col">
-          <h4>Quick Links</h4>
-          <ul class="footer__links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Flights</a></li>
-            <li><a href="#">Hotels</a></li>
-            <li><a href="#">Cruise</a></li>
-          </ul>
+        <div class="footer__links">
+          <a href="#">Terms</a>
+          <a href="#">Privacy</a>
+          <a href="#">Help</a>
         </div>
-        <div class="footer__col">
-          <h4>Contact Us</h4>
-          <ul class="footer__links">
-            <li>
-              <a href="#">
-                <span><i class="ri-phone-fill"></i></span> +91 9876543210
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span><i class="ri-record-mail-line"></i></span> info@skywings
-              </a>
-            </li>
-            <li>
-              <a href="#">
-                <span><i class="ri-map-pin-2-fill"></i></span> New Delhi, India
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>Subscribe</h4>
-          <form action="/subscribe">
-            <button class="btn">Subscribe</button>
-          </form>
-        </div>
-      </div>
-      <div class="footer__bar">
-        Copyright © 2024 Web Design Mastery. All rights reserved.
+        <p>&copy; 2024 Skywings. All rights reserved.</p>
       </div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="main.js"></script>
-    <script src="js/search-app.js"></script>
-<!-- Trigger button to open the popup -->
-<button class="btn" id="openSubscribePopup">Subscribe</button>
+    <script>
+      angular.module('searchApp', []).controller('SearchController', function ($scope) {
+        $scope.search = function () {
+          alert('Searching for: ' + $scope.searchQuery);
+        };
+      });
+
+      // Handle popup
+      document.getElementById("openSubscribePopup").onclick = function() {
+        document.getElementById("subscribePopup").style.display = "block";
+      };
+
+      document.getElementById("closePopup").onclick = function() {
+        document.getElementById("subscribePopup").style.display = "none";
+      };
+    </script>
   </body>
-  <!-- Popup for Subscription -->
-<div class="popup" id="subscribePopup">
-  <div class="popup__content">
-    <span class="popup__close" id="closePopup">&times;</span>
-    <h2>Subscribe to Our Newsletter</h2>
-    <p>Stay updated with the latest travel tips and promotions!</p>
-    <form id="subscribeForm">
-      <input type="email" placeholder="Enter your email" required />
-      <button type="submit" class="btn">Subscribe</button>
-    </form>
-  </div>
-</div>
 </html>

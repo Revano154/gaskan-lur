@@ -28,11 +28,7 @@
                 <td>@{{ trip.duration }} days</td>
                 <td>
                     <a ng-href="/trips/@{{ trip._id.$oid }}/edit" class="btn btn-warning">Edit</a>
-                    <form action="/trips/@{{ trip._id.$oid }}" method="POST" style="display:inline-block;">
-                        @csrf
-                        @method('DELETE')
-                        <button type="submit" class="btn btn-danger">Delete</button>
-                    </form>
+                    <button ng-click="deleteTrip(trip._id.$oid)" class="btn btn-danger">Delete</button>
                 </td>
             </tr>
         </tbody>
@@ -41,10 +37,24 @@
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 <script>
     var app = angular.module('tripApp', []);
-    app.controller('tripController', function($scope) {
+    app.controller('tripController', function($scope, $http) {
         $scope.trips = @json($trips);
-        $scope.editUrl = function(id) {
-            return '{{ route("trips.edit", "") }}/' + id;
+
+        $scope.deleteTrip = function(id) {
+            if(confirm("Are you sure you want to delete this trip?")) {
+                $http({
+                    method: 'DELETE',
+                    url: '/trips/' + id,
+                    headers: {
+                        'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                    }
+                }).then(function(response) {
+                    // Remove the deleted trip from the trips array
+                    $scope.trips = $scope.trips.filter(trip => trip._id.$oid !== id);
+                }, function(error) {
+                    console.error('Error deleting trip:', error);
+                });
+            }
         };
     });
 </script>

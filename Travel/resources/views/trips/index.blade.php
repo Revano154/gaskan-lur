@@ -21,14 +21,14 @@
         </thead>
         <tbody>
             <tr ng-repeat="trip in trips | filter:searchText">
-                <td>@{{ trip._id }}</td>
+                <td>@{{ trip._id.$oid }}</td>
                 <td>@{{ trip.destination }}</td>
                 <td>@{{ trip.description }}</td>
                 <td>@{{ trip.price }}</td>
                 <td>@{{ trip.duration }} days</td>
                 <td>
-                    <a href="/trips/@{{ trip._id }}/edit" class="btn btn-warning">Edit</a>
-                    <form action="/trips/@{{ trip._id }}" method="POST" style="display:inline-block;">
+                    <a ng-href="/trips/@{{ trip._id.$oid }}/edit" class="btn btn-warning">Edit</a>
+                    <form action="/trips/@{{ trip._id.$oid }}" method="POST" style="display:inline-block;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger">Delete</button>
@@ -43,6 +43,9 @@
     var app = angular.module('tripApp', []);
     app.controller('tripController', function($scope) {
         $scope.trips = @json($trips);
+        $scope.editUrl = function(id) {
+            return '{{ route("trips.edit", "") }}/' + id;
+        };
     });
 </script>
 @endsection
